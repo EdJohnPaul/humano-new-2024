@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important; 
+    list-style: none;
+    outline-style: none;
+}
+
+body{
+    
+    background-color: #EFEFEF;
+}
+
+/*-------------------------
+        Layout
+---------------------------*/
+#layout{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: #4A4A4A;
+}
+
+#sideCanvas{
+    height: 100vh;
+    width: 28vh; 
+    background-color: white;
+    transition: all;
+    position: fixed;
+}
+
+#navCanvas{
+    height: 12vh;
+    margin-left: 28vh;
+}
+
+#canvas{
+    height: 88vh;
+    margin-left: 28vh;
+}
+
+
+/*----------------------------
+    Sidebar (Desktop View)
+------------------------------*/
+#side-header{
+    height:12vh; 
+    background-color: #107A71;
+}
+
+#side-header img{
+    height:6.5vh; 
+}
+
+#sidebar #side-btn{
+    height: 88vh;
+    border-right: #e2e2e2 1px solid;
+}
+
+#side-user{
+    padding-top: 65px;
+}
+
+#side-circle{
+    width: 10vh;
+    height: 10vh; 
+    background-color:#D9D9D9; 
+    color:#898989; 
+    font-size: 35px; 
+}
+
+#side-user p{
+    font-size: 13px;
+}
+
+#side-user hr{
+    border-color: #eeeeee;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+
+/*-------------------------
+    Navbar (Mobile View)
+---------------------------*/
+#logo-nav{
+    height: 12vh;
+    background-color: #107A71;
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+.navbar-collapse {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    background-color: #107A71; 
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: rgba(118, 118, 118, 0.2) 0px 8px 24px;
+}
+
+/* dropdown menu bg */
+.dropdown-menu {
+    background-color: transparent !important;
+}
+
+/* dropdown menu style */
+.dropdown-menu a{
+    color: white;
+    font-size: 17px;
+    margin: -6px;
+    margin-left: 18px;
+}
+
+
+/* active navbar */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    background-color: white !important;
+    color: #107A71 !important;
+    border-radius: 5px;
+}
+
+
+hr{
+    border-color: #23847C;
+}
+
+
+.logout {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*----------------------------
+    Sidebar (Desktop View)
+------------------------------*/
+
+
+.sidebar-link{
+    margin-top: 2.5px;
+    color: #5A5A5A;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.sidebar-item ul a{
+    font-size: 12px;
+}
+
+#side-user p{
+    font-size: 12px;
+}
+
+ #icon{
+    margin-right: 12px;
+    margin-top: 1px;
+}
+
+#side-menu a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar-drop{
+    color: #5A5A5A;
+}
+
+.sidebar-drop:hover{
+    color: #107A71;
+}
+
+/* dropdown arrow */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; /* Optional: Add smooth transition */
+}
+
+
+.navbar-nav .sidebar-link.active,
+.navbar-nav .sidebar-link:focus,
+.navbar-nav .sidebar-link:hover {
+    background-color: #107A71 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.navbar-nav .sidebar-drop.active,
+.navbar-nav .sidebar-drop:focus,
+.navbar-nav .sidebar-drop:hover {
+    color: #107A71 !important;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #navCanvas, #canvas {
+        margin-left: 0; 
+    }
+}
