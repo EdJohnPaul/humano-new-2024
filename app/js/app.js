@@ -44,8 +44,17 @@ $(document).ready(function(){
         toggleSidebar : function(){
             $(document).ready(function(){
                 $('#toggle-sidebar').on('click', function(){
-                    $('#sideCanvas').toggleClass("d-md-none");
-                })
+                    $('#sideCanvas').toggleClass("d-md-none"); // Toggle sidebar visibility
+            
+                    // Adjust margin-left for main content based on sidebar visibility
+                    if ($('#sideCanvas').hasClass("d-md-none")) {
+                        $('#navCanvas').css('margin-left', '0'); // Move main content back to the left
+                        $('#canvas').css('margin-left', '0');
+                    } else {
+                        $('#navCanvas').css('margin-left', '28vh'); // Move main content to the right to make space for sidebar
+                        $('#canvas').css('margin-left', '28vh');
+                    }
+                });
             })
         },
 
@@ -111,10 +120,18 @@ $(document).ready(function(){
         
         Path.map('#/dashboard/').to(function(){
             App.canvas.html("").append($.Mustache.render("dash-container"));
+            $('#table-birthday-celebrants').DataTable({
+                responsive: true,
+                scrollY : 400
+            });
         });
 
-        Path.map('#/master-file').to(function(){
-            App.canvas.html("").append($.Mustache.render("master"));
+        Path.map('#/masterfile/').to(function(){
+            App.canvas.html("").append($.Mustache.render("master-file"));
+        });
+
+        Path.map('#/settings/').to(function(){
+            App.canvas.html("").append($.Mustache.render("settings"));
         });
         Path.root();
         Path.listen();
